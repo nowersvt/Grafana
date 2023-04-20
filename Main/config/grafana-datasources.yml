@@ -8,3 +8,11 @@ datasources:
     version: 1
     editable: false #or true
     isDefault: false
+    
+  - name: #Name
+    type: loki 
+    access: proxy
+    url: #http://<you_instance_publicip>[:3100]
+    version: 1
+    editable: false #or true
+    isDefault: false
