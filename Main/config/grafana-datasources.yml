@@ -4,7 +4,7 @@ datasources:
   - name: #Name
     type: loki 
     access: proxy
-    url: #you_instance_publicip_
+    url: #http://<you_instance_publicip>[:3100]
     version: 1
     editable: false #or true
     isDefault: false
