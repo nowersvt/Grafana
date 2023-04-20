@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  nginx-app:
+    container_name: apache-app
+    image: apache
+    labels:
+      logging: "promtail"
+      logging_jobname: "containerlogs"
+    ports:
+      - 8080:80
+    networks:
+      - app
+    restart: always
+
+  loki:
+    image: grafana/loki:latest
+    ports:
+      - 3100:3100
+    command: -config.file=/etc/loki/local-config.yaml
+    networks:
+      - app
+    restart: always
+
+  promtail:
+    image:  grafana/promtail:latest
+    container_name: promtail
+    volumes:
+      - ./config/promtail.yaml:/etc/promtail/docker-config.yaml
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: -config.file=/etc/promtail/docker-config.yaml
+    depends_on:
+      - loki
+    networks:
+      - app
+    restart: always
+
+networks:
+  app:
+    name: app
