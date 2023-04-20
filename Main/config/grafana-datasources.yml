@@ -1,10 +1,10 @@
 apiVersion: 1
 
 datasources:
-  - name: Loki
-    type: loki
+  - name: #Name
+    type: loki 
     access: proxy
-    url: http://loki:3100
+    url: #you_instance_publicip_
     version: 1
-    editable: false
-    isDefault: true
+    editable: false #or true
+    isDefault: false
