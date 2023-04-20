@@ -3,7 +3,7 @@ version: '3.8'
 services:
   nginx-app:
     container_name: apache-app
-    image: apache
+    image: httpd:latest
     labels:
       logging: "promtail"
       logging_jobname: "containerlogs"
