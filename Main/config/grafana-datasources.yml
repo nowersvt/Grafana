@@ -16,3 +16,19 @@ datasources:
     version: 1
     editable: false #or true
     isDefault: false
+
+  - name: #Name
+    type: prometheus
+    access: proxy
+    url: #http://<your_prometheus_instance_publicip>[:9090]
+    version: 1
+    editable: false #or true
+    isDefault: false
+
+  - name: #Name
+    type: prometheus
+    access: proxy
+    url: #http://<your_prometheus_instance_publicip>[:9090]
+    version: 1
+    editable: false #or true
+    isDefault: false
