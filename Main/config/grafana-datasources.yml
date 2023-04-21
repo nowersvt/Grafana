@@ -6,7 +6,7 @@ datasources:
     access: proxy
     url: #http://you_instance_publicip:3100
     version: 1
-    editable: false 
+    editable: true 
     isDefault: false
     
   - name: #Name
@@ -14,7 +14,7 @@ datasources:
     access: proxy
     url: #http://you_instance_publicip>:3100
     version: 1
-    editable: false 
+    editable: true 
     isDefault: false
 
   - name: #Name
@@ -22,7 +22,7 @@ datasources:
     access: proxy
     url: #http://your_prometheus_instance_publicip:9090
     version: 1
-    editable: false 
+    editable: true 
     isDefault: false
 
   - name: #Name
@@ -30,7 +30,7 @@ datasources:
     access: proxy
     url: #http://your_prometheus_instance_publicip:9090
     version: 1
-    editable: false 
+    editable: true 
     isDefault: false
 
   - name: #name
@@ -38,7 +38,7 @@ datasources:
     access: proxy
     url: #http://your_alertmanager_instance_publicip:9093
     version: 1
-    editable: false
+    editable: true
     isDefault: false
 
   - name: #name
@@ -46,5 +46,5 @@ datasources:
     access: proxy
     url: #http://your_alertmanager_instance_publicip:9093
     version: 1
-    editable: false
+    editable: true
     isDefault: false
