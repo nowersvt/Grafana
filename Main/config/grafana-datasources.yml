@@ -34,17 +34,17 @@ datasources:
     isDefault: false
 
   - name: #name
-    type: prometheus
+    type: alertmanager
     access: proxy
     url: #http://your_alertmanager_instance_publicip:9093
     version: 1
-    editable: false #
+    editable: false
     isDefault: false
-  
+
   - name: #name
-    type: prometheus
+    type: alertmanager
     access: proxy
     url: #http://your_alertmanager_instance_publicip:9093
     version: 1
-    editable: false 
+    editable: false
     isDefault: false
