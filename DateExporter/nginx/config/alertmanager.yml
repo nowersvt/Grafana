@@ -1,0 +1,18 @@
+global:
+slack_api_url: 'https://hooks.slack.com/services/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'
+resolve_timeout: 5m
+
+route:
+group_by: ['alertname', 'job']
+group_wait: 30s
+group_interval: 5m
+repeat_interval: 3h
+receiver: 'slack'
+
+receivers:
+
+name: 'slack'
+slack_configs:
+api_url: '{{ .Global.SlackAPIURL }}'
+send_resolved: true
+username: 'alertmanager'

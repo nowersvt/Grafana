@@ -28,7 +28,7 @@ services:
       - 9090:9090
     networks:
       - app
-
+      
 networks:
   app:
     name: app

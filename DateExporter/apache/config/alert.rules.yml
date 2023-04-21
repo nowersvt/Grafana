@@ -1,0 +1,10 @@
+groups:
+- name: apache
+  rules:
+  - alert: ApacheAlert
+    expr: expr == 1
+    labels:
+      severity: warning
+    annotations:
+      summary: "Apache alert"
+      description: "Value of expr is 1"
